@@ -68,7 +68,7 @@
                     <div class="dropdown-menu dropdown-menu-end">
                         <!-- item-->
                         <h6 class="dropdown-header">Welcome <?php echo e(Auth::user()->name); ?></h6>
-                        <?php if(Auth::user()->role==999): ?>
+                        <?php if(Auth::user()->role==5): ?>
                         <a class="dropdown-item" href="<?php echo e(url('/edit_restaurant/'.Auth::user()->seller_id)); ?>"><i class="mdi mdi-account-circle text-muted fs-16 align-middle me-1"></i> <span class="align-middle">Profile</span></a>
                         <?php endif; ?>
                         

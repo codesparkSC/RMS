@@ -22,7 +22,7 @@
    
    <div class="page_single layout_fullwidth_padding">
    
-       {{-- <h4 class="checkout_title">YOUR DETAILS</h4>	
+       <!-- <h4 class="checkout_title">YOUR DETAILS</h4>	
            <div class="contactform">
          
            <input type="hidden" name="user_id" id="user_id" value="">
@@ -44,25 +44,26 @@
            <label>Message:</label>
            <textarea name="message" id="ContactComment" class="form_textarea textarea required" rows="" cols=""></textarea>
           
-           </div> --}}
+           </div>  -->
                            
            <h4 class="checkout_title">ORDER DETAILS</h4>
            <div id="cart">
-           
-                     {{-- <div class="order_item">
+            
+                   <div class="order_item">
                        <div class="order_item_thumb"><a href="shop-item.html" class="close-panel"><img src="images/shop_thumb2.jpg" alt="" title="" /></a></div>
                        <div class="order_item_title"><span>1 X</span> Yellow Car</div>
                        <div class="order_item_price">$1200</div>           
                    </div>
+                   <!--
                    <div class="order_item">
                        <div class="order_item_thumb"><a href="shop-item.html" class="close-panel"><img src="images/shop_thumb3.jpg" alt="" title="" /></a></div>
                        <div class="order_item_title"><span>1 X</span> Summer T-Shirt</div>
                        <div class="order_item_price">$20</div>           
-                   </div> --}}
+                   </div>  -->
            </div>
-            <h4 class="checkout_title">SELECT PAYMENT</h4>
+            <h4 class="checkout_title mt-2">SELECT PAYMENT</h4>
             
-                   <div class="contactform">
+                   <div class="contactform mt-2">
                        <div class="checkout_select">
    
                                  <label class="label-radio item-content">
@@ -161,6 +162,7 @@
                         if(response.length>0)
                         {
                              currency=response[0].currency;
+                           console.log(response)
                             response.forEach(function(resp) {
                                 console.log(resp.id);
                                 total   += parseInt(resp.price)*parseInt(resp.quantity);

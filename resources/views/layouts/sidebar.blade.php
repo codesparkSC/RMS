@@ -37,7 +37,7 @@
                         <i class="ri-dashboard-2-line" ></i> <span>Dashboard</span>
                     </a>
                 </li> 
-                {{-- <li class="nav-item">
+               <!-- <li class="nav-item">
                     <a class="nav-link menu-link" href="#sidebarDashboards" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarDashboards">
                         <i class="ri-dashboard-2-line"></i> <span>@lang('translation.dashboards')</span>
                     </a>
@@ -66,7 +66,7 @@
                             </li>
                         </ul>
                     </div>
-                </li> <!-- end Dashboard Menu --> --}}
+                </li> end Dashboard Menu  -->
               @if(Auth::user()->role==1)
               {{-- <li class="nav-item">
                 <a class="nav-link menu-link" href="{{url('/users')}}"  >
@@ -127,11 +127,7 @@
                     </a>
                 </li> 
 
-                {{-- <li class="nav-item">
-                    <a class="nav-link menu-link" href="{{url('/orders')}}"  >
-                        <i class="ri-file-edit-line" ></i> <span>Orders</span>
-                    </a>
-                </li>  --}}
+                
                 <li class="nav-item">
                     <a class="nav-link menu-link" href="#orders" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="orders">
                         <i class="ri-dashboard-2-line"></i> <span> Orders</span>

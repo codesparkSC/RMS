@@ -714,7 +714,7 @@
                     <div class="dropdown-menu dropdown-menu-end">
                         <!-- item-->
                         <h6 class="dropdown-header">Welcome {{Auth::user()->name}}</h6>
-                        @if(Auth::user()->role==999)
+                        @if(Auth::user()->role==5)
                         <a class="dropdown-item" href="{{url('/edit_restaurant/'.Auth::user()->seller_id)}}"><i class="mdi mdi-account-circle text-muted fs-16 align-middle me-1"></i> <span class="align-middle">Profile</span></a>
                         @endif
                         {{-- <a class="dropdown-item" href="apps-chat"><i class="mdi mdi-message-text-outline text-muted fs-16 align-middle me-1"></i> <span class="align-middle">Messages</span></a>
