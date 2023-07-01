@@ -1588,4 +1588,74 @@ class ApiController extends Controller
       return response()->json(['recordsTotal' => $count,'recordsFiltered' =>$count ,'data'=>$final_list]);
     }
 
+
+    public function getprofile(Request $request)
+    {
+      $data=$request->all();
+      $rules = array(
+        'user_id'=>'required',
+        'seller_id'=>'required',
+       // 'staff_id'=>'required',
+     );
+    $messages = [
+      'required' => 'The :attribute field is required.',
+    ];
+    $validator = Validator::make($request->all(),$rules,$messages);
+      
+      if ($validator->fails()) {
+        return Response::json(array(
+          'success' => false,
+          'errors' => $validator->errors()->all(),
+          'message'=>"Please Fill All Details"
+      ), 400); 
+      
+      }
+      else{
+        $customer=Customer::where('id',$data['user_id'])->where('seller_id',$data['seller_id'])->first();
+
+        return Response::json(array(
+          'success' => true,
+          'data' => $customer,
+          'message'=>'Customer Details.'
+         ), 200); 
+        }
+    }
+    
+    public function update_customer(Request $request)
+    {
+      $data=$request->all();
+      $rules = array(
+        'user_id'=>'required',
+        'seller_id'=>'required',
+        'name'=>'required',
+        'email'=>'required',
+        'mobile_no'=>'required',
+        'address'=>'required',
+     );
+    $messages = [
+      'required' => 'The :attribute field is required.',
+    ];
+    $validator = Validator::make($request->all(),$rules,$messages);
+      
+      if ($validator->fails()) {
+        return Response::json(array(
+          'success' => false,
+          'errors' => $validator->errors()->all(),
+          'message'=>"Please Fill All Details"
+      ), 400); 
+      
+      }
+      else{
+        $customer=Customer::where('id',$data['user_id'])->where('seller_id',$data['seller_id'])->update([
+          'name'=>$data['name'],'email'=>$data['email'],'mobile_no'=>$data['mobile_no'],'address'=>$data['address'],
+        ]);
+
+        return Response::json(array(
+          'success' => true,
+          'data' => $customer,
+          'message'=>'Customer Details Updated Successfully.'
+         ), 200); 
+        }
+    }
+
 }

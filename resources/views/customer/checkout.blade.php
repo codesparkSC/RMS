@@ -49,12 +49,12 @@
            <h4 class="checkout_title">ORDER DETAILS</h4>
            <div id="cart">
             
-                   <div class="order_item">
+                    <!--  <div class="order_item">
                        <div class="order_item_thumb"><a href="shop-item.html" class="close-panel"><img src="images/shop_thumb2.jpg" alt="" title="" /></a></div>
                        <div class="order_item_title"><span>1 X</span> Yellow Car</div>
                        <div class="order_item_price">$1200</div>           
                    </div>
-                   <!--
+                
                    <div class="order_item">
                        <div class="order_item_thumb"><a href="shop-item.html" class="close-panel"><img src="images/shop_thumb3.jpg" alt="" title="" /></a></div>
                        <div class="order_item_title"><span>1 X</span> Summer T-Shirt</div>
@@ -67,11 +67,12 @@
                        <div class="checkout_select">
    
                                  <label class="label-radio item-content">
-                                
+                               
                                    <input type="radio" name="payment" value="1" >
                                    <div class="item-inner">
                                      <div class="item-title">Paypal</div>
-                                   </div>
+                                  
+                                </div>
                                  </label>
                                  <label class="label-radio item-content">
                                 
@@ -108,7 +109,8 @@
                          
                          <div class="carttotal_row_last">
                           <input type="hidden" name="final" value="">
-                         <div class="carttotal_left">TOTAL</div> <div class="final">
+                         <div class="carttotal_left">TOTAL</div> 
+                         <div class="final">
                           
                             </div>
                          </div>
@@ -118,15 +120,10 @@
              
 
            </div>
+          </form>  
     </div>
-        
-        
-   </div>
- </div>
-
-          
-</div>      
-</form>    
+           
+  
 
                
                   @section('script')

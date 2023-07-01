@@ -11,7 +11,7 @@
 <link rel="stylesheet" href="{{asset('customer/css/swiper.css')}}">
 <link rel="stylesheet" href="{{asset('customer/css/style.css')}}">
 <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,900" rel="stylesheet"> 
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastify-js/1.6.1/toastify.min.css" />
 <style type="text/css">
 	img.logo {
     	width: 45px;
@@ -151,13 +151,13 @@
                             <img src="{{asset('customer/images/icons/white/menu.png')}}" alt="" title="" /></a>
                         </div>			
                         <div class="navbar_right">
-                            <a href="#" data-panel="right" class="open-panel">
-                                <img src="{{asset('customer/images/icons/white/user.png')}}" alt="" title="" />
+                            <a href="{{url('/profile')}}" data-panel="right" class="open-panel">
+                                <img src="{{asset('customer/images/icons/white/user.png')}}" alt="" title="profile" />
                             </a>
                         </div>
                         <div class="navbar_right">
-                            <a href="cart" data-view=".view-main">
-                                <img src="{{asset('customer/images/icons/white/cart.png')}}" alt="" title="" />
+                            <a href="{{url('/cart')}}" data-view=".view-main">
+                                <img src="{{asset('customer/images/icons/white/cart.png')}}" alt="" title="cart" />
                                 <span id="total_cart">0</span>
                             </a>
                         </div>			
@@ -173,6 +173,7 @@
     <script src="{{asset('customer/js/jquery.validate.min.js')}}" ></script>
     <script src="{{asset('customer/js/swiper.min.js')}}"></script>
     <script src="{{asset('/assets/js/comman.js')}}"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/toastify-js/1.6.1/toastify.js"></script>
     @yield('script')
 </body>
 </html>

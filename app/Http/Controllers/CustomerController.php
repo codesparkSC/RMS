@@ -67,6 +67,18 @@ class CustomerController extends Controller
       
     }
 
+    public function profile()
+    {
+       $user= Session::get('user_data');
+       if($user){
+        return view('customer.profile');
+       }
+       else{
+        return view('customer.msg');
+       }
+      
+    }
+
     public function cart()
     {
        $user= Session::get('user_data');

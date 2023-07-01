@@ -22,6 +22,7 @@
                   </div>
                
                   @section('script')
+             
 <script>
  var skip=0;
 
@@ -97,6 +98,10 @@ $(document).ready(function(){
          $('#product_list').append(lihtml);
          $('#skip').val()
          skip=skip+20;
+         if((response.data).length <=skip)
+         {
+            $('.load_more').hide();
+         }
          $('.loader').hide();
          console.log("skip"+skip)
     });
@@ -193,8 +198,7 @@ $(document).ready(function(){
             }else{
                 toast_error(response.message)
             }
-            // $('#total_cart').html(response.total.total);
-          //  $('input[name=quantity_'+response.data[0].id+']').val(response.data[0].quantity);
+           
         });
 
         $('.loader').hide();

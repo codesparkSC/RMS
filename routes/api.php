@@ -142,5 +142,9 @@ Route::post('customer_login', [App\Http\Controllers\ApiController::class, 'custo
 
 Route::post('customerotp', [App\Http\Controllers\ApiController::class, 'customerotp'])->name('customerotp');
 
+Route::post('getprofile', [App\Http\Controllers\ApiController::class, 'getprofile'])->name('getprofile');
+
+Route::post('update_customer', [App\Http\Controllers\ApiController::class, 'update_customer'])->name('update_customer');
+
 Route::post('generatebill', [App\Http\Controllers\ApiController::class, 'generatebill'])->name('generatebill');
 

@@ -33,28 +33,28 @@
                         <input type="hidden" name="user_id" id="user_id" value="{{$id}}">
 
                         
-                        <div class="col-xxl-3 col-md-6">
+                        <div class="col-xxl-4 col-md-6">
                             <div>
                                 <label for="placeholderInput" class="form-label">User Name  <span class="text-danger"> *</span></label>
                                 <input type="text" class="form-control" id="name"  placeholder="Enter User Name" name="name">
                             </div>
                         </div>
 
-                        <div class="col-xxl-3 col-md-6">
+                        <div class="col-xxl-4 col-md-6">
                             <div>
                                 <label for="placeholderInput" class="form-label">Email ID  <span class="text-danger"> *</span></label>
                                 <input type="text" class="form-control" id="email"  placeholder="Enter User Email" name="email">
                             </div>
                         </div>
 
-                        <div class="col-xxl-3 col-md-6">
+                        <div class="col-xxl-4 col-md-6">
                             <div>
                                 <label for="placeholderInput" class="form-label">Mobile No  <span class="text-danger"> *</span></label>
                                 <input type="number" class="form-control" id="mobile_no" min=0  placeholder="Enter Mobile No" name="mobile_no">
                             </div>
                         </div>
 
-                        <div class="col-xxl-3 col-md-6">
+                        <div class="col-xxl-4 col-md-6">
                             <div>
                                 <label for="placeholderInput" class="form-label">Password  <span class="text-danger"> *</span></label>
                                 <div class="position-relative auth-pass-inputgroup mb-3">
@@ -64,7 +64,7 @@
                         </div>
 
 
-                            <div class="col-xxl-3 col-md-6">
+                            <div class="col-xxl-4 col-md-6">
                                 <div>
                                     <label for="placeholderInput" class="form-label">Select Role <span class="text-danger"> *</span></label>
                                     <select class="form-select" aria-label="Select Role" name="role" id="role">

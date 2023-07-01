@@ -74,3 +74,5 @@ Route::get('/cart', [App\Http\Controllers\CustomerController::class, 'cart'])->n
 Route::get('/checkout', [App\Http\Controllers\CustomerController::class, 'checkout'])->name('checkout');
 
 Route::get('/home', [App\Http\Controllers\CustomerController::class, 'home'])->name('home');
+
+Route::get('/profile', [App\Http\Controllers\CustomerController::class, 'profile'])->name('profile');
