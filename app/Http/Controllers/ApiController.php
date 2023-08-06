@@ -58,25 +58,25 @@ class ApiController extends Controller
             ), 400); 
           }
           else{
-            $otp='123456';                //random_int(100000, 999999);
+            $otp=random_int(100000, 999999);                //'123456';
             $seller=Seller::updateOrCreate(['email_id'=>$data['email']],['name'=>$data['name'],'company_name'=>$data['name'],'mobile_no'=>$data['mobile_no'],'password'=>$data['password'],'otp'=>$otp,'agree_check'=>$data['agree_check']]);
             
-            // $subject="OTP - ".$otp." For Restaurant Managment System Login";            
-            // $html=view('Emails.otp',compact('otp'))->render();  
-            // $to= $data['email'];
-            // $headers = "MIME-Version: 1.0" . "\r\n";
-            // $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-            // $headers .= 'From: <order@boleh.store>' . "\r\n";
-            // mail($to,$subject,$html,$headers);
+            $subject="OTP - ".$otp." For Restaurant Managment System Login";            
+            $html=view('Emails.otp',compact('otp'))->render();  
+            $to= $data['email'];
+            $headers = "MIME-Version: 1.0" . "\r\n";
+            $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+            $headers .= 'From: <order@boleh.store>' . "\r\n";
+            mail($to,$subject,$html,$headers);
 
-            //$emaildata = array('otp'=>$otp);
-           //  $user = array('to_email'=>$data['email'],'to_name'=>$data['name']);
+            $emaildata = array('otp'=>$otp);
+            $user = array('to_email'=>$data['email'],'to_name'=>$data['name']);
           
             
-          //   Mail::send('Emails.otp', $emaildata, function($message) use ($user) {
-          //     $message->to($user['to_email'],$user['to_name'])->subject('Boleh Store Login');
-          //     $message->from('xyz@gmail.com','Virat Gandhi');
-          //  });
+            Mail::send('Emails.otp', $emaildata, function($message) use ($user) {
+              $message->to($user['to_email'],$user['to_name'])->subject('Boleh Store Login');
+              $message->from('order@boleh.store','Boleh Store');
+           });
 
             return Response::json(array(
                 'success' => true,
@@ -1494,25 +1494,25 @@ class ApiController extends Controller
       }
       else{
          
-            $otp='123456';    //random_int(100000, 999999);
+            $otp=random_int(100000, 999999);  //'123456';
             $customer=Customer::updateOrCreate(['email'=>$data['email'],'seller_id'=>$data['res_id']],['otp'=>$otp]);
             
-            // $subject="OTP - ".$otp." For Restaurant Managment System Login";            
-            // $html=view('Emails.otp',compact('otp'))->render();  
-            // $to= $data['email'];
-            // $headers = "MIME-Version: 1.0" . "\r\n";
-            // $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-            // $headers .= 'From: <order@boleh.store>' . "\r\n";
-            // mail($to,$subject,$html,$headers);
+            $subject="OTP - ".$otp." For Restaurant Managment System Login";            
+            $html=view('Emails.otp',compact('otp'))->render();  
+            $to= $data['email'];
+            $headers = "MIME-Version: 1.0" . "\r\n";
+            $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+            $headers .= 'From: <order@boleh.store>' . "\r\n";
+            mail($to,$subject,$html,$headers);
 
-            //$emaildata = array('otp'=>$otp);
-           //  $user = array('to_email'=>$data['email'],'to_name'=>$data['name']);
+            $emaildata = array('otp'=>$otp);
+            $user = array('to_email'=>$data['email'],'to_name'=>$data['name']);
           
             
-          //   Mail::send('Emails.otp', $emaildata, function($message) use ($user) {
-          //     $message->to($user['to_email'],$user['to_name'])->subject('Boleh Store Login');
-          //     $message->from('xyz@gmail.com','Virat Gandhi');
-          //  });
+            Mail::send('Emails.otp', $emaildata, function($message) use ($user) {
+              $message->to($user['to_email'],$user['to_name'])->subject('Boleh Store Login');
+              $message->from('order@boleh.store','Boleh Store');
+           });
 
             return Response::json(array(
                 'success' => true,
